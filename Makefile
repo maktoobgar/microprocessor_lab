@@ -102,7 +102,7 @@ $(TARGET).elf:$(OBJECTS)
 # Create object files
 %.o: %.cpp
 	$(CC) $(CFLAGS) -c $< -o $@
-	chmod +x main.o
+	chmod +x *.o
 
 # 
 # Program avr - send file to programmer

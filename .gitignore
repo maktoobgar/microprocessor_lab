@@ -1,3 +1,8 @@
 *.o
 *.obj
 *.elf
+*.pdsbak
+*.workspace
+*.odt
+*.odt#
+Project Backups
