@@ -77,20 +77,15 @@ int main()
     _timer0_initialization();
     _interuption_initialization();
 
-    DDRD = 0xFF;
-    PORTD = 0x00;
-
     while (true)
     {
         if ((PINC & 0x04) == 0x04)
         {
             direction = true;
-            PORTD = 0xFF;
         }
         else
         {
             direction = false;
-            PORTD = 0x00;
         }
     }
 }
