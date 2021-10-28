@@ -39,6 +39,7 @@ void next_move()
 ISR(TIMER0_OVF_vect)
 {
     counter += 0.5;
+
     if (counter >= COUNT)
     {
         counter = 0;
@@ -48,7 +49,6 @@ ISR(TIMER0_OVF_vect)
 ISR(TIMER0_COMP_vect)
 {
     counter += 0.5;
-    PORTD = 0xFF;
 
     if (counter >= COUNT)
     {
