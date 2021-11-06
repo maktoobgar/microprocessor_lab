@@ -49,5 +49,8 @@
         "cinttypes": "cpp",
         "typeinfo": "cpp",
         "sstream": "cpp"
-    }
+    },
+    "workbench.editorAssociations": {
+        "*.md": "default"
+    },
 }

@@ -51,9 +51,11 @@ void lcd_data(unsigned char data)
     _delay_ms(5);
 }
 
-void display(int num)
+void display(float celsius)
 {
-    lcd_data(pgm_read_byte(&(nums[num])));
+    int num = int(celsius);
+    lcd_data(pgm_read_byte(&(nums[int(num / 10)])));
+    lcd_data(pgm_read_byte(&(nums[int(num % 10)])));
 }
 
 int main()
@@ -84,9 +86,7 @@ int main()
         // Clearing the display
         command(0x01);
 
-        display(int(celsius / 10));
-
-        display(int(celsius) % 10);
+        display(celsius);
 
         _delay_ms(500);
     }
